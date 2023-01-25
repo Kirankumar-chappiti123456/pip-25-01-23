@@ -1,0 +1,14 @@
+#include <stdio.h>  
+#include<stdlib.h>
+int main()  
+{  
+   int a=560;  
+   int *ptr=&a;  
+   free(ptr);
+   printf("%d",*ptr);
+   return 0;  
+}  
+dangling pointer:
+1) the pointer pointing to deallocated pointers are out of bond in the scope.
+2)the memory will be out of scope . and pointing to the another location.
+3)the no output or any error value.
