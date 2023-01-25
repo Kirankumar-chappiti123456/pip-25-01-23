@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int a[]={1,2,5,3,4,6},i=0;
+    int l=sizeof(a)/sizeof(a[0]);
+    int *p=&a[0];
+    printf("display array elements:");
+    for(i=0;i<l;i++)
+    {
+        printf("%d",*(p+i));
+    }
+}
