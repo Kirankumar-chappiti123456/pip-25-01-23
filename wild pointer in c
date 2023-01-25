@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int *p; // it is wild pointer  
+    printf("%d",*p); // no output.
+}
+and uninitialised pointer is called wild pointer.
+
+
+correct way:
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    int *p=&a;  // initialised correct way.
+    printf("%d",*p); 
+}
