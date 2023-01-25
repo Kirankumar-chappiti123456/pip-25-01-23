@@ -1,0 +1,55 @@
+#include<stdio.h>
+int swaptoarray(int a[],int b[],int n)
+{
+    int *p=&a[0];
+    int *p1=&b[0];
+    for(int i=0;i<n;i++)
+    {
+    int temp=*(p+i);
+    *(p+i)=*(p1+i);
+    *(p1+i)=temp;
+}
+printf("the array of a[i]:");
+    for(int i=0;i<n;i++)
+    {
+    printf("%d",*(p+i));
+    }
+    printf("\n");
+    printf("the array of b[i]:");
+    for(int i=0;i<n;i++)
+    {
+    printf("%d",*(p1+i));
+}
+}
+int main()
+{
+    int n,i=0;
+    printf("enter the size of array;");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter the array of a[i]:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int b[n];
+    printf("enter the array of b[i]:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&b[i]);
+    }
+    printf("before the swap a[i]:");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",a[i]);
+    }
+    printf("\n");
+    printf("before the swap b[i]:");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",b[i]);
+    }
+    printf("\n");
+    int (*fptr)(int [],int [],int)=swaptoarray;
+    fptr(a,b,n);
+}
