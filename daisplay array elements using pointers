@@ -10,3 +10,29 @@ int main()
         printf("%d",*(p+i));
     }
 }
+
+
+#include<stdio.h>
+int displayarrayelements(int n, int a[])
+{
+    int *p=&a[0],i=0;
+    printf("display array elements:");
+    for(i=0;i<n;i++)
+    {
+        printf("%d",*(p+i));
+    }
+}
+int main()
+{
+    int n;
+    printf("enter the size of array:");
+    scanf("%d",&n);
+    int a[n],i=0;
+    printf("enter the array elements:");
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);
+    }
+    int (*fptr)(int ,int [])=displayarrayelements;
+    fptr(n,a);
+}
