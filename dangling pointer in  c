@@ -12,3 +12,4 @@ dangling pointer:
 1) the pointer pointing to deallocated pointers are out of bond in the scope.
 2)the memory will be out of scope . and pointing to the another location.
 3)the no output or any error value.
+4)after the free() doing and we not assign it to pointer and is dangling pointer.
