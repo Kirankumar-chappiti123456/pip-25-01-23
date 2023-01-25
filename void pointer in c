@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    void *ptr=&a;
+    printf("%d",*(int*)ptr);
+}
+
+
+void pointer:
+1)the void pointer holds the any data .
+2)the pointer does want it is any data type.
+3)and we typecast it very easy way.
