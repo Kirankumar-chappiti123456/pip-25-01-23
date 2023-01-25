@@ -53,3 +53,44 @@ int main()
     int (*fptr)(int [],int [],int)=swaptoarray;
     fptr(a,b,n);
 }
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a[]={1,2,3,4,5};
+    int b[]={6,7,8,9,0};
+     printf("before swap of a[i]:");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",a[i]);
+    }
+    printf("\n");
+    printf("before swap of b[i]:");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",b[i]);
+    }
+    printf("\n");
+    int *p=&a[0];
+    int *p1=&b[0];
+    for(int i=0;i<5;i++)
+    {
+        int temp=*(p+i);
+        *(p+i)=*(p1+i);
+        *(p1+i)=temp;
+    }
+    printf("after swap of a[i]:");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",*(p+i));
+    }
+    printf("\n");
+    printf("after swap of b[i]:");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",*(p1+i));
+    }
+}
