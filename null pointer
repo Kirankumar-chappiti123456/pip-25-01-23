@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    //int a=10;
+int *ptr=0;
+(ptr!=NULL)?printf("%d",*ptr):printf("invlid pointer");
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+int *ptr=0;
+(ptr!=NULL)?printf("%d",*ptr):printf("invlid pointer");
+}
